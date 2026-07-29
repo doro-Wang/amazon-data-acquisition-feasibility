@@ -82,7 +82,7 @@
 | Verified purchase | Yes |
 
 
-### Full Review Access
+#### Full Review Access
 
 | Field | Result |
 |---|---|
@@ -118,7 +118,7 @@
 
 ### Customer Review Data Availability
 
-### Top Reviews
+#### Top Reviews
 
 | Field | Available |
 |---|---|
@@ -130,7 +130,7 @@
 | Verified purchase | Yes |
 
 
-### Full Review Access
+#### Full Review Access
 
 | Field | Result |
 |---|---|
@@ -164,7 +164,7 @@
 
 ### Customer Review Data Availability
 
-### Top Reviews
+#### Top Reviews
 
 | Field | Available |
 |---|---|
@@ -176,7 +176,7 @@
 | Verified purchase | Yes |
 
 
-### Full Review Access
+#### Full Review Access
 
 | Field | Result |
 |---|---|
@@ -210,7 +210,7 @@
 
 ### Customer Review Data Availability
 
-### Top Reviews
+#### Top Reviews
 
 | Field | Available |
 |---|---|
@@ -222,7 +222,7 @@
 | Verified purchase | Yes |
 
 
-### Full Review Access
+#### Full Review Access
 
 | Field | Result |
 |---|---|
