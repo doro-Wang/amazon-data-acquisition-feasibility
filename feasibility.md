@@ -1,8 +1,8 @@
 # Amazon Data Acquisition Feasibility Report
 
-##Test Case 1: Beauty & Health
+## Test Case 1: Beauty & Health
 
-###Product Information
+### Product Information
 
 | Field        | Value                                     |
 | ------------ | ----------------------------------------- |
@@ -12,7 +12,7 @@
 | URL          | https://www.amazon.com/Est%C3%A9e-Lauder-Foundation-36-Hour-Long-Wear/dp/B0FWCZJCSY/ref=sr_1_1_sspa?crid=2VT5I9X13N7KQ&dib=eyJ2IjoiMSJ9.Fyf926sXdVWf0AEptavW1Cu-k2WJjC-h-bNGQHPyjlyQ6kaNPB5rlLq4wQyvry1ZesdsvNVPdkk5mvwWhQa80MgsGs-Gv9OHao-4cT5yLDKihcLZkd117tZlBm5PKBdpGQoA0YICmEj8umaLVZ_QliOSUUBAgKDFfh-9JD-REQCvo4-ohXPdDzZkLr33EdFvY6qlYdF1DIVn7--fLm1yO-VRcWPgSpSetb3hwjAwCkpHpa8KRvoxV3F0cLBHw9oKAsa29FgdlTqORKJaRPMzc_9tRCZTlSAgqcn19Ff0QfU.8XeJIjTu5qLNONxGFa7E5FsR0bhXPvQuoSw-Vm_-LKk&dib_tag=se&keywords=foundation&qid=1785232918&rdc=1&sprefix=foundati%2Caps%2C445&sr=8-1-spons&sp_csd=d2lkZ2V0TmFtZT1zcF9hdGY&th=1‘|
 | Page access  | Yes                                       |
 
-###Product Data Availability
+### Product Data Availability
 
 | Field               | Available |
 | ------------------- | --------- |
@@ -24,9 +24,9 @@
 | Product images      | Yes       |
 | Product description | Yes       |
 
-###Customer Review Data Availability
+### Customer Review Data Availability
 
-####Visible Top Reviews:
+#### Visible Top Reviews:
 
 | Field             | Available |
 | ----------------- | --------- |
@@ -37,14 +37,14 @@
 | Purchased variant | Yes       |
 | Verified purchase | Yes       |
 
-####Full Review Access
+#### Full Review Access
 
 | Field              | Result                       |
 | ------------------ | ---------------------------- |
 | Full review access | Login required               |
 
 
-##Test Case 2: Electronics
+## Test Case 2: Electronics
 
 ### Product Information
 
