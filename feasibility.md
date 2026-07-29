@@ -26,7 +26,7 @@
 
 ### Customer Review Data Availability
 
-#### Visible Top Reviews:
+#### Top Reviews:
 
 | Field             | Available |
 | ----------------- | --------- |
@@ -70,7 +70,7 @@
 
 ### Customer Review Data Availability
 
-#### Top Reviews (without login)
+#### Top Reviews
 
 | Field | Available |
 |---|---|
@@ -118,7 +118,7 @@
 
 ### Customer Review Data Availability
 
-### Top Reviews (without login)
+### Top Reviews
 
 | Field | Available |
 |---|---|
@@ -164,7 +164,7 @@
 
 ### Customer Review Data Availability
 
-### Top Reviews (without login)
+### Top Reviews
 
 | Field | Available |
 |---|---|
@@ -210,7 +210,7 @@
 
 ### Customer Review Data Availability
 
-### Visible Reviews (without login)
+### Top Reviews
 
 | Field | Available |
 |---|---|
