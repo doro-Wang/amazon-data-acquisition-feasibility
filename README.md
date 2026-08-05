@@ -1,12 +1,16 @@
 # amazon-data-acquisition-feasibility
 Evaluating Amazon as a recurring source for structured product and review data acquisition.
-## Objective
-The goal is to determine:
-- what information can be collected from Amazon product pages
-- whether the data is accessible consistently
-- whether customer reviews can be collected at meaningful scale
-- whether Amazon is suitable for a recurring ingestion pipeline
 
+## Objective
+The goal of this feasibility assessment is to evaluate whether Amazon can serve as a reliable recurring data source.
+
+The assessment evaluates:
+
+- what product and review fields are accessible
+- whether review data can be collected consistently
+- whether review pagination and extraction scale reliably
+- what limitations affect automated recurring collection
+- whether Amazon is suitable for downstream analytical pipelines
 
 ## Tested Categories
 
@@ -19,38 +23,32 @@ The feasibility study covers multiple Amazon product categories:
 - Home, Garden & Tools
 
 
-## Evaluation Criteria
+## Evaluation Dimensions
 
-Each product page was evaluated based on:
-
-### Product Data
-- Product Name
-- Category
-- ASIN
-- URL
-- page access
-- Product title
-- Brand (or Author for books)
-- Price
-- Rating
-- Rating count
-- Product images
-- Product description
-
-
-### Customer Review Data
-- Reviewer name
-- Review date
-- Review text
-- Helpful votes
-- Purchased variant
-- Verified purchase
+### Data Availability
+- Product metadata
+- Review fields
 
 ### Accessibility
-- Product page accessibility
-- Top reviews accessibility
-- Full review accessibility
+- Page accessibility
+- Review accessibility
 
+### Repeatability
+- Multiple collection attempts
+- Consistency of returned data
+
+### Scalability
+- Pagination behavior
+- Reviews collected per product
+
+### Data Quality
+- Completeness
+- Stability of fields
+
+### Maintenance Complexity
+- Login requirements
+- Manual intervention
+- Access restrictions
 
 
 ## Key Findings
