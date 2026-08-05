@@ -43,6 +43,158 @@
 | ------------------ | ---------------------------- |
 | Full review access | Login required               |
 
+## Phase 2: Review Data Pipeline Feasibility
+
+### 2.1 Review Field Accessibility Test
+
+#### Method
+
+A baseline automated acquisition test was conducted using Python requests to evaluate whether Amazon review data could be directly extracted from the returned HTML response.
+
+#### Result
+
+| Metric | Result |
+|---|---|
+| HTTP status | 200 |
+| Product page accessible | Yes |
+| Review data in HTML response | No |
+| Review objects extracted | 0 |
+
+#### Observation
+
+The Amazon review page was accessible through an HTTP request, but customer review content was not included in the initial HTML response.
+
+
+### 2.2 Anonymous Access Restriction Test
+
+#### Method
+
+The review page was accessed through a standard browser session to evaluate whether review content could be accessed without additional authentication.
+
+#### Result
+
+| Metric | Result |
+|---|---|
+| Review page accessible | Redirected to sign-in |
+| Login required | Yes |
+| Manual intervention required | Yes |
+
+#### Observation
+
+Accessing full review content through a browser session triggered an Amazon sign-in requirement, indicating that authentication may be a limitation for recurring automated collection.
+
+## 2.3 Authenticated Review Extraction Test
+
+### Objective
+
+This test evaluates whether customer reviews can be extracted after authentication and whether structured review fields are available for downstream analysis.
+
+### Method
+
+An authenticated Amazon browser session was used to access the customer review page.
+
+The returned HTML response was collected and parsed using Python `BeautifulSoup`.
+
+Review objects were identified using Amazon's review HTML structure:
+
+data-hook="review"
+
+### Result
+
+| Metric | Result |
+|---|---|
+| Authentication required | Yes |
+| Review page accessibility | Successful |
+| Review objects extracted | 8 |
+| Extraction method | HTML parsing |
+| Structured review fields available | Yes |
+
+### Accessible Review Fields
+
+| Field | Available | Notes |
+|---|---|---|
+| Review ID | Yes | Unique review identifier available in HTML attributes |
+| Reviewer name | Yes | Extracted from review profile information |
+| Rating | Yes | Star rating available |
+| Review date | Yes | Review date available |
+| Review title | Yes | Review title available |
+| Review text | Yes | Full review content available |
+| Verified purchase | Yes | Verification badge available when displayed |
+
+### Sample Extraction Output
+
+{
+  "review_id": "R2HYGL19WKA0G1",
+  "reviewer": "Susie Smith",
+  "rating": "5.0 out of 5 stars",
+  "date": "Reviewed in the United States on May 7, 2026",
+  "title": "Quality",
+  "body": "Really lasts well on your face",
+  "verified_purchase": true
+}
+
+### Observation
+
+Authenticated access enables structured extraction of customer review data. However, authentication requirements introduce additional complexity for automated recurring collection.
+
+## 2.4 Review Pagination Test
+
+### Objective
+
+This test evaluates whether Amazon review data can be collected across multiple pages without additional manual intervention.
+
+### Method
+
+After extracting reviews from the initial accessible review set, additional review pages were tested through the Amazon review interface.
+
+The test evaluated whether:
+
+- additional pages could be accessed directly
+- review extraction could continue automatically
+- additional user actions were required
+
+### Result
+
+| Metric | Result |
+|---|---|
+| Page 1 review extraction | Successful |
+| Page 2 direct access | Not available in testing environment |
+| Additional request required | Yes |
+| Manual intervention required | Yes |
+
+### Observation
+
+Additional review pages were not directly accessible through a standard pagination workflow in the tested environment.
+
+Instead, requesting more reviews triggered an additional request process, requiring manual intervention. This limits the ability to continuously collect reviews through an automated pipeline.
+
+## 2.5 Repeatability Test
+
+### Objective
+
+This test evaluates whether the review extraction process produces consistent results across repeated collection attempts.
+
+### Method
+
+The same review extraction workflow was repeated using the same product and the same parsing logic.
+
+The extracted review count, review IDs, and review fields were compared between two extraction runs to evaluate consistency.
+
+### Result
+
+| Metric | Run 1 | Run 2 |
+|---|---|---|
+| Reviews extracted | 8 | 8 |
+| Review IDs consistency | Yes | Yes |
+| Review fields consistency | Yes | Yes |
+
+### Observation
+
+The extraction process produced consistent results across repeated runs under the same authenticated access conditions.
+
+The number of extracted reviews and review identifiers remained unchanged between the two runs, indicating that the review extraction method is reproducible.
+
+However, repeatability was validated only for the initially accessible review set. Expanding this process to larger-scale collection may still be affected by Amazon's additional review access restrictions.
 
 ## Test Case 2: Electronics
 
