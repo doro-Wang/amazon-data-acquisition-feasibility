@@ -45,7 +45,7 @@
 
 ## Phase 2: Review Data Pipeline Feasibility
 
-### 2.1 Review Field Accessibility Test
+### 2.1 Automated Review Acquisition Test
 
 #### Method
 
@@ -195,6 +195,44 @@ The extraction process produced consistent results across repeated runs under th
 The number of extracted reviews and review identifiers remained unchanged between the two runs, indicating that the review extraction method is reproducible.
 
 However, repeatability was validated only for the initially accessible review set. Expanding this process to larger-scale collection may still be affected by Amazon's additional review access restrictions.
+
+# Phase 3: Source Evaluation Scorecard
+
+## Evaluation Criteria
+
+The following scorecard was created to evaluate potential data sources consistently.
+
+| Dimension | Evaluation Criteria |
+|---|---|
+| Data Availability | Availability of product metadata and required review fields |
+| Accessibility | Ease of accessing product and review data |
+| Repeatability | Consistency across multiple collection attempts |
+| Scalability | Ability to collect reviews across pages and products |
+| Data Quality | Completeness and stability of collected fields |
+| Maintenance Complexity | Login requirements, manual intervention, and access restrictions |
+
+## Amazon Source Evaluation
+
+| Dimension | Score | Evaluation |
+|---|---|---|
+| Data Availability | 5/5 | Product metadata and structured review fields are available. Extracted review data includes review ID, reviewer name, rating, date, title, text, and verified purchase information. |
+| Accessibility | 3/5 | Product pages are accessible, but review access requires authentication. Anonymous access does not expose review data. |
+| Repeatability | 4/5 | Repeated extraction attempts under the same authenticated conditions produced consistent review counts and review IDs. |
+| Scalability | 2/5 | Initial review extraction is possible, but additional review access requires a request process, limiting multi-page collection. |
+| Data Quality | 4/5 | Review data contains rich user-generated content and structured attributes, although some fields may vary depending on review availability. |
+| Maintenance Complexity | 2/5 | Authentication requirements, manual review access requests, and access restrictions increase pipeline maintenance effort. |
+
+## Overall Assessment
+
+| Source | Overall Score |
+|---|---|
+| Amazon | 20/30 |
+
+## Conclusion
+
+Amazon provides high-quality product and review data suitable for downstream analysis. The main challenges are not data availability or extraction quality, but rather access restrictions and scalability.
+
+While authenticated extraction is feasible, building a fully automated recurring review data pipeline would require additional handling for authentication, access management, and review volume limitations.
 
 ## Test Case 2: Electronics
 
