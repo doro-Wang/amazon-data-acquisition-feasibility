@@ -1,0 +1,26 @@
+[
+  {
+    "review_id": "sample_review_001",
+    "rating": "5.0 out of 5 stars",
+    "date": "Reviewed in the United States on May 7, 2026",
+    "title": "Quality",
+    "body": "Really lasts well on your face",
+    "verified_purchase": true
+  },
+  {
+    "review_id": "sample_review_002",
+    "rating": "1.0 out of 5 stars",
+    "date": "Reviewed in the United States on June 29, 2026",
+    "title": "Disappointed",
+    "body": "The new foundation formulation isn’t great. The color does not match the old one, my skin looks orange and the foundation doesn’t seat well in the skin. Very disappointing.",
+    "verified_purchase": true
+  },
+  {
+    "review_id": "sample_review_003",
+    "rating": "5.0 out of 5 stars",
+    "date": "Reviewed in the United States on February 16, 2026",
+    "title": "Amazing full coverage foundation",
+    "body": "This foundation is amazing and well worth the price. It’s full coverage and hides discoloration and skin imperfections so well.",
+    "verified_purchase": false
+  }
+]
