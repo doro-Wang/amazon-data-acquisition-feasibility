@@ -1,4 +1,34 @@
-# Amazon Data Acquisition Feasibility Report
+# Data Source Feasibility Comparison Report
+
+## 1. Objective
+
+The objective of this assessment is to identify a suitable public data source for building the first recurring user-generated text ingestion prototype.
+
+Candidate sources are evaluated based on their ability to provide sufficient user-generated content, support repeatable automated collection, and minimize operational complexity.
+
+Three candidate sources were tested:
+
+- Amazon
+- Steam
+- Hacker News
+
+The assessment focuses on small controlled tests rather than large-scale data collection. The goal is to compare the practical feasibility of each source under the same evaluation framework and recommend the most suitable source for the initial recurring ingestion pipeline.
+
+## 2. Evaluation Framework
+
+The following dimensions are used consistently across all candidate sources.
+
+| Dimension | Evaluation Criteria |
+|---|---|
+| Data Availability | Availability of user-generated text and relevant data |
+| Accessibility | Ability to access data without login, gated APIs, or manual intervention |
+| Repeatability | Consistency of results across repeated collection attempts |
+| Scalability | Ability to expand collection across additional records, pages, or threads |
+| Data Quality | Completeness and stability of collected fields |
+| Maintenance Complexity | Engineering effort required to maintain recurring collection |
+
+Each dimension is scored from 1 to 5, where a higher score indicates stronger feasibility for recurring automated ingestion.
+
 
 ## Test Case 1: Beauty & Health
 
