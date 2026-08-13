@@ -1,0 +1,19 @@
+=== Run 1 ===
+Comments found: 20
+
+=== Run 2 ===
+Comments found: 20
+
+=== Repeatability Result ===
+Comment count consistent: True
+Comment IDs consistent: True
+Full comment records consistent: True
+Run 1 unique IDs: 20
+Run 2 unique IDs: 20
+
+=== Data Quality Check ===
+comment_id missing: 0 / 20
+author missing: 1 / 20
+text missing: 1 / 20
+timestamp missing: 0 / 20
+parent_id missing: 0 / 20
