@@ -8,3 +8,11 @@ Review count consistent: True
 Review IDs consistent: True
 Run 1 unique IDs: 20
 Run 2 unique IDs: 20
+
+=== Data Quality Check ===
+recommendationid missing: 0 / 20
+language missing: 0 / 20
+review missing: 0 / 20
+timestamp_created missing: 0 / 20
+voted_up missing: 0 / 20
+votes_up missing: 0 / 20
