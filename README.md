@@ -1,74 +1,31 @@
-# amazon-data-acquisition-feasibility
-Evaluating Amazon as a recurring source for structured product and review data acquisition.
+# Data Source Feasibility Assessment
 
-## Objective
-The goal of this feasibility assessment is to evaluate whether Amazon can serve as a reliable recurring data source.
+This repository contains a feasibility assessment of public data sources for a recurring user-generated text ingestion pipeline.
 
-The assessment evaluates:
+## Recommendation
 
-- what product and review fields are accessible
-- whether review data can be collected consistently
-- whether review pagination and extraction scale reliably
-- what limitations affect automated recurring collection
-- whether Amazon is suitable for downstream analytical pipelines
+Based on the controlled tests, **Steam is recommended as the source for the first recurring ingestion prototype**.
 
-## Tested Categories
+It provided the strongest combination of public accessibility, structured review data, repeatable extraction, scalable pagination, and low maintenance complexity.
 
-The feasibility study covers multiple Amazon product categories:
+## Repository Contents
 
-- Beauty & Health
-- Electronics
-- Books
-- Clothing, Shoes, Jewelry & Watches
-- Home, Garden & Tools
+- `Data Source Feasibility Comparison Report.md`  
+  Detailed source evaluation, test methodology, scorecards, trade-offs, and final recommendation.
 
+- `scripts/`  
+  Python scripts used for extraction, pagination, and repeatability testing.
 
-## Evaluation Dimensions
+- `sample_outputs/`  
+  Small sample datasets and test results used as supporting evidence.
 
-### Data Availability
-- Product metadata
-- Review fields
+## Sources Tested
 
-### Accessibility
-- Page accessibility
-- Review accessibility
+### Amazon
+Rich product and review data, but recurring review collection is limited by authentication requirements and restricted review access.
 
-### Repeatability
-- Multiple collection attempts
-- Consistency of returned data
+### Steam
+Public structured review data with successful pagination, repeatable collection, and strong data completeness.
 
-### Scalability
-- Pagination behavior
-- Reviews collected per product
-
-### Data Quality
-- Completeness
-- Stability of fields
-
-### Maintenance Complexity
-- Login requirements
-- Manual intervention
-- Access restrictions
-
-
-## Key Findings
-
-### Product Data
-
-Amazon product pages generally expose structured product data, including product information, pricing, ratings, and descriptions.
-
-### Customer Reviews
-
-A limited number of customer reviews may be visible directly on product pages. However, full review access requires login, which creates limitations for recurring automated collection.
-
-### Accessibility
-
-During manual testing, product pages were consistently accessible. No CAPTCHA, missing content, or unstable page behavior were observed.
-
-
-## Conclusion
-
-Amazon appears suitable for collecting product metadata.
-
-However, using Amazon as a recurring customer review data source requires further investigation due to login requirements limitations.
-
+### Hacker News
+Public discussion data with strong accessibility and repeatability, but additional preprocessing and per-item retrieval are required.
