@@ -1,0 +1,10 @@
+=== Run 1 ===
+Reviews found: 20
+
+=== Run 2 ===
+Reviews found: 20
+
+Review count consistent: True
+Review IDs consistent: True
+Run 1 unique IDs: 20
+Run 2 unique IDs: 20
