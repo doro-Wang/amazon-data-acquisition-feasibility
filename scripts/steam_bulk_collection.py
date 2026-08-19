@@ -6,9 +6,7 @@ from requests.adapters import HTTPAdapter
 from urllib3.util.retry import Retry
 
 
-# =========================================================
 # 1. Games to collect
-# =========================================================
 
 GAMES = {
     "Warframe": 230410,
@@ -23,9 +21,7 @@ TARGET_PER_GAME = 2000
 BASE_URL = "https://store.steampowered.com/appreviews"
 
 
-# =========================================================
 # 2. Create HTTP session with retry logic
-# =========================================================
 
 session = requests.Session()
 
@@ -54,9 +50,7 @@ session.mount(
 )
 
 
-# =========================================================
 # 3. Collect reviews for one game
-# =========================================================
 
 def collect_game_reviews(
     game_name,
@@ -265,9 +259,7 @@ def collect_game_reviews(
     return collected_reviews
 
 
-# =========================================================
 # 4. Collect all games
-# =========================================================
 
 all_reviews = []
 
@@ -284,9 +276,7 @@ for game_name, app_id in GAMES.items():
     )
 
 
-# =========================================================
 # 5. Convert to DataFrame
-# =========================================================
 
 df = pd.DataFrame(
     all_reviews
@@ -321,9 +311,7 @@ print(
 )
 
 
-# =========================================================
 # 6. Save dataset
-# =========================================================
 
 output_path = "data/steam_reviews.csv"
 
